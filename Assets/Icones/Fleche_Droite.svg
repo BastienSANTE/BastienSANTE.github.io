@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666665"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="Fleche_Droite.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showguides="true"
+     inkscape:zoom="18.484612"
+     inkscape:cx="13.308367"
+     inkscape:cy="20.855185"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0,16.933333"
+       orientation="-0.70710678,-0.70710678"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="16.933333,16.933333"
+       orientation="0.70710678,-0.70710678"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.4666665,8.4666665"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8.4666665,8.4666665"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#151515;stroke-width:1.05834;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 4.105251,0.37786675 7.9428469,4.2476385 4.105251,8.1174102"
+       id="path4" />
+    <path
+       style="fill:none;stroke:#151515;stroke-width:1.05834;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.4827157,4.2476387 H -0.02814469"
+       id="path5" />
+  </g>
+</svg>

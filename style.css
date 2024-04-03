@@ -1,0 +1,192 @@
+/* ------------------
+ *    FICHIER CSS
+ * ------------------
+ * J'ai tenté de créer un code organisé afin d'éviter l'enfer
+ * du "mauvais CSS". Les éléments doivent être rangés du plus
+ * génréaliste au plus spécifique.
+ * Les propriétés des éléments doivent être arrangées comme
+ * suit : POSITIONNEMENT -> STYLE -> STYLE DYNAMIQUE.
+ * Les animations se situent en fin de fichier.
+ */
+ 
+/*IMPORTATION DES POLICES*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;600&display=swap');
+
+
+/*ELEMENTS GLOBAUX*/
+html{
+  scroll-behavior: smooth;
+}
+body {
+  color: #ffffff;
+  background-color: #080808;
+  background-image: url("./Assets/Motif_AP.svg");
+  background-size: 100%;
+  background-position: center center;
+  backdrop-filter: blur(50px);
+  font-family: JetBrains Mono;
+  font-weight: lighter;
+  animation: 2s fadein_bg;
+}
+li{
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/*CLASSES*/
+  /*MENU DE NAVIGATION*/
+.navmenu {
+  display: flex;
+  justify-content: center;
+
+  color: white;
+  background-color: #080808;
+  border-bottom: 2px solid #e4e43b;
+}
+.navmenu-items {
+  display: flex;
+}
+.navmenu-items li {
+  margin: 1em;
+}
+.navmenu-items li:hover{
+  color: #e4e43b;
+  font-weight: bold;
+}
+
+/*NOM*/
+.nom {
+  text-align: center;
+  margin-top: 250px;
+  margin-bottom: 100%;
+
+  animation-delay: 3s;
+  animation:
+    1.5s 2s shrink_rise forwards;
+}
+.nom h1 {
+  margin-bottom: 0;
+
+  font-family: JetBrains Mono;
+  font-weight: normal;
+  font-size: 2.5em;
+
+  animation: 2s fadein_title;
+}
+.nom h2 {
+  font-weight: lighter;
+  animation: 2s fadein_title;
+}
+
+.site_container{
+  
+}
+.site {
+  animation:
+    3s standstill;
+    2s rise;
+
+
+}
+
+/*SECTIONS DU SITE*/
+.section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+
+  border-radius: 10px;
+}
+.section-title{
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*GRILLE DES TRAVAUX*/
+.expogrid {
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-count: 5;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding-bottom: 2.5%;
+}
+.expogrid div {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  object-fit: fill;
+  background-color: #1c1c1c;
+  background-position: center center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 20px #00000040;
+  transition: all 0.25s;
+} .expogrid div :hover {
+  animation: lighten 0.25s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+.expogrid div > img {
+  box-shadow: 0px 0px 10px 10px #000000 100%;
+}
+.expogrid_button {
+  display: inline-block;
+  align-content: center;
+  max-width: 10%;
+  min-width: 140px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: large;
+  line-height: 2em;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffff80;
+  color: ##151515;
+}
+.expogrid_button img{
+  scale: 0.75;
+}
+
+
+
+/*ANIMATIONS*/
+@keyframes shrink_rise {
+  from{ margin-top: 250px;
+        margin-bottom: 100%;}
+  to  { margin-top: 100px;
+        margin-bottom: 100px;}
+}
+
+@keyframes fadein_title {
+  0%   { opacity: 0;
+         -webkit-transform: scale(0); }
+  100% { opacity: 1;
+         -webkit-transform: scale(1); }
+}
+
+@keyframes fadein_bg {
+  from  { background-color: #000000;
+          background-size: 25%;
+          opacity: 0.6; }
+  to    { background-color: #080808;
+          background-size: 100%;
+          opacity: 1;   }
+}
+
+@keyframes lighten {
+  from{ filter: brightness(100%) }
+  to  { filter: brightness(150%) }
+}
+

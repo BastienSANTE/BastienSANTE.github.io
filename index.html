@@ -1,58 +1,60 @@
 <!DOCTYPE html>
-
-<!-- saved from url=(0030)https://bas7ien.neocities.org/ -->
-
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Bienvenue!</title>
-    
-    <link href="../CSS/defaut.css" rel="stylesheet" type="text/css" media="all">
+<html lang="en">
+  <head>
+    <title>Bastien SANTÉ - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
   </head>
-      <body>
-      
-          <img src="/Essentiels/LogoProv.svg" style="align: right">
 
+  <body>
 
-          <h1>Bienvenue sur mon site!</h1>
+    <nav class="navmenu">
+      <ul class="navmenu-items">
+        <li>Accueil</li>
+        <li><a href="#work_grid">Travaux</a></li>
+        <li><a href="#pers_grid">Projets</a></li>
+        <li>Reseaux</li>
+      </ul>
+    </nav> 
 
-          <div id="Haut">
-              <table class="Selection" style="">
-                  <tbody>
-                      <tr>
-                          <td><a href="./Dessin/DepartDessin.html">Dessin</a></td>
-                          <td><a href="./Graphisme/DepartGraph.html">Graphisme</a></td>
-                          <td><a href="./3D/Depart3D.html">3D</a></td>
-                          <td><a href="./JV/DepartJV.html">JV</a></td>
-                          <td><a href="./Cine/DepartCine.html">Cinéma</a></td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
+    <div class="nom">
+      <h1>Bastien SANTÉ</h1>
+      <h2>Étudiant en animation 3D</h2>
+    </div>
 
-          <div id="Centre" class="Bloc2Base" style="width: 80%; margin-top: 100px;">
+    <div class="site_container">
+      <div class="site">
 
-              <h2>Actualités</h2>
+        <div class="section">
+          <p class="section-title">TRAVAUX D'ETUDES</p> 
+          <div class="expogrid" id="work_grid"></div>                           <!--TODO : Finir de remplir la grille-->
+            <button type="button" class="expogrid_button">Galerie<img style="float: right;" src="./Assets/Icones/Fleche_Droite.svg" alt="" srcset=""></button>
+        </div>
 
-              <p>Mise en ligne prochaine de nouveaux travaux!</p>
+        <div class="section">
+          <p class="section-title">PROJETS PERSONNELS</p>                       <!--TODO : Finir de remplir la grille-->
+          <div class="expogrid" id="pers_grid"></div>
+            <button type="button" class="expogrid_button">Galerie<img style="float: right;" src="./Assets/Icones/Fleche_Droite.svg" alt="" srcset=""></button>
+        </div>
 
-          </div>
+        <div class="section">
+          <p class="section-title">RESEAUX</p>
+          <!--TODO: Liste de liens vers YT, IG, Twitch-->
+          <nav class="navmenu">
+            <ul class="navmenu-items">
+              <li><a href="https://www.youtube.com/@yoshise7en518">YouTube</li>
+              <li><a href="https://instagram.com/bastos.y7">Instagram</li>
+              <li><a href=" AJOUTER UN LIEN">Portfolio PDF</li>
+            </ul>
+          </nav>
+        </div>
 
-          <div id="Bas">
-              <footer>
-                  <table class="Contact">
-                      <tbody>
-                          <tr>
-                              <td><a href="https://www.youtube.com/channel/UC3XFS3jcvW545fVuux5TTMw">YouTube</a></td>
-                              <td><a href="https://www.twitch.tv/yoshise7enfr">Twitch</a></td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </footer>
-          </div>
+      </div>
+    </div>
 
-      </body>
+    <script src="./main.js"></script>
+
+  </body>
 
 </html>
