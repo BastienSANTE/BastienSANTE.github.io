@@ -11,10 +11,11 @@
 
     <nav class="navmenu">
       <ul class="navmenu-items">
-        <li>Accueil</li>
-        <li><a href="#work_grid">Travaux</a></li>
-        <li><a href="#pers_grid">Projets</a></li>
-        <li>Reseaux</li>
+        <button><div><img src="Assets/Icones/Accueil.svg" alt=""></div>Accueil</button>
+        <button><div><img src="Assets/Icones/Travaux.svg" alt=""></div><a href="#work_grid">Travaux</a></button>
+        <button><div><img src="Assets/Icones/Projets.svg" alt=""></div><a href="#pers_grid">Projets</a></button>
+        <button><div><img src="Assets/Icones/Reseaux.svg" alt=""></div>Reseaux</button>
+        <button><div><img src="Assets/Icones/Infos.svg" alt=""></div>Infos</button>
       </ul>
     </nav> 
 
@@ -30,28 +31,30 @@
           <p class="section-title">TRAVAUX D'ETUDES</p> 
           <div class="expogrid" id="work_grid"></div>                           <!--TODO : Finir de remplir la grille-->
             <button type="button" class="expogrid_button">Galerie<img style="float: right;" src="./Assets/Icones/Fleche_Droite.svg" alt="" srcset=""></button>
+          </div>
         </div>
 
         <div class="section">
           <p class="section-title">PROJETS PERSONNELS</p>                       <!--TODO : Finir de remplir la grille-->
           <div class="expogrid" id="pers_grid"></div>
             <button type="button" class="expogrid_button">Galerie<img style="float: right;" src="./Assets/Icones/Fleche_Droite.svg" alt="" srcset=""></button>
+          </div>
         </div>
 
         <div class="section">
           <p class="section-title">RESEAUX</p>
           <!--TODO: Liste de liens vers YT, IG, Twitch-->
-          <nav class="navmenu">
-            <ul class="navmenu-items">
-              <li><a href="https://www.youtube.com/@yoshise7en518">YouTube</li>
-              <li><a href="https://instagram.com/bastos.y7">Instagram</li>
-              <li><a href=" AJOUTER UN LIEN">Portfolio PDF</li>
-            </ul>
-          </nav>
         </div>
-
-      </div>
+      </div> 
     </div>
+
+    <nav class="navmenu_bottom">
+      <ul class="navmenu-items">
+        <button><div><img src="Assets/Icones/YouTube.svg" alt=""></div><li><a href="https://www.youtube.com/@yoshise7en518">YT</a></li></button>
+        <button><div><img src="Assets/Icones/Accueil.svg" alt=""></div><li><a href="https://instagram.com/bastos.y7">Insta</a></li></button>
+        <button><div><img src="Assets/Icones/Portfolio.svg" alt=""></div><li><a href=" AJOUTER UN LIEN">Book</a></li></button>
+      </ul>
+    </nav>
 
     <script src="./main.js"></script>
 

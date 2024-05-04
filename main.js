@@ -1,3 +1,7 @@
+const name = "Bastien SANTE"
+
+
+
 let image_count = 8;
 let image_ident = [];
   

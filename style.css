@@ -12,18 +12,35 @@
 /*IMPORTATION DES POLICES*/
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;600&display=swap');
 
+/*######################################################################*/
+
+:root {
+  --variable1 : blue;
+  /* Exemple */
+  color: var(--variable1);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 /*ELEMENTS GLOBAUX*/
 html{
   scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+/*Remise à 0 des marges des éléments chiants*/
+html, body, ul {  
+  margin: 0;
+  padding: 0;
 }
 body {
+  /*overflow: hidden;*/
   color: #ffffff;
-  background-color: #080808;
-  background-image: url("./Assets/Motif_AP.svg");
+  background-color: #202020;
   background-size: 100%;
   background-position: center center;
-  backdrop-filter: blur(50px);
   font-family: JetBrains Mono;
   font-weight: lighter;
   animation: 2s fadein_bg;
@@ -41,31 +58,71 @@ a {
 }
 
 
+
+/*######################################################################*/
+
 /*CLASSES*/
   /*MENU DE NAVIGATION*/
 .navmenu {
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #202020;
+  box-shadow: 0px 0px 15px #000000;
+}
+.navmenu_bottom {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px 0px 15px #000000;
 
-  color: white;
-  background-color: #080808;
-  border-bottom: 2px solid #e4e43b;
 }
 .navmenu-items {
   display: flex;
+  animation: 2s fadein_title;
 }
-.navmenu-items li {
-  margin: 1em;
+.navmenu-items button {
+  margin: 10px;
+  border: 0px;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #202020;
 }
-.navmenu-items li:hover{
-  color: #e4e43b;
-  font-weight: bold;
+.navmenu-items button > div {
+  margin-bottom: 10px;
+  background-color: #ffff80;
+  border-radius: 50%;
+  padding: 20px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+@media all and (max-width: 600px) {
+  .navmenu-items button > div {
+    width: 20px;
+    height: 20px;
+  }
+  nav > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.navmenu-items button > div > img {
+  /* scale: 0.67; */
+  width: 80%;
+}
+
 
 /*NOM*/
 .nom {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 350px;
   margin-bottom: 100%;
 
   animation-delay: 3s;
@@ -86,9 +143,6 @@ a {
   animation: 2s fadein_title;
 }
 
-.site_container{
-  
-}
 .site {
   animation:
     3s standstill;
@@ -99,7 +153,7 @@ a {
 
 /*SECTIONS DU SITE*/
 .section {
-  width: 80%;
+  width: 85%;
   margin: auto;
   text-align: center;
 
@@ -114,7 +168,8 @@ a {
 
 /*GRILLE DES TRAVAUX*/
 .expogrid {
-  width: 75%;
+  min-width: 250px;
+  max-width: 80%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -145,7 +200,7 @@ a {
   align-content: center;
   max-width: 10%;
   min-width: 140px;
-  height: 40px;
+  height: 35px;
   font-family: inherit;
   font-weight: bold;
   font-size: large;
@@ -155,18 +210,27 @@ a {
   background-color: #ffff80;
   color: ##151515;
 }
-.expogrid_button img{
+@media all and (max-width: 400px){
+  .expogrid div {
+    border-radius: 5px;
+  }
+}
+.expogrid_button:hover {
+  cursor: pointer;
+  animation: 0.75s lighten_color infinite alternate;
+}
+.expogrid_button > img {
   scale: 0.75;
 }
 
-
+/*######################################################################*/
 
 /*ANIMATIONS*/
 @keyframes shrink_rise {
-  from{ margin-top: 250px;
+  from{ margin-top: 350px;
         margin-bottom: 100%;}
-  to  { margin-top: 100px;
-        margin-bottom: 100px;}
+  to  { margin-top: 200px;
+        margin-bottom: 150px;}
 }
 
 @keyframes fadein_title {
@@ -180,7 +244,7 @@ a {
   from  { background-color: #000000;
           background-size: 25%;
           opacity: 0.6; }
-  to    { background-color: #080808;
+  to    { background-color: #202020;
           background-size: 100%;
           opacity: 1;   }
 }
@@ -190,3 +254,12 @@ a {
   to  { filter: brightness(150%) }
 }
 
+@keyframes lighten_color {
+  from{background-color: #ffff80;}
+  to  {background-color: #ffffff;}
+}
+
+@keyframes come_down {
+  { margin-bottom: 100%;}
+  100% { margin-bottom: 0%;  }
+}
