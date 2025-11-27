@@ -1,16 +1,19 @@
 /* ------------------
  *    FICHIER CSS
  * ------------------
- * J'ai tenté de créer un code organisé afin d'éviter l'enfer
- * du "mauvais CSS". Les éléments doivent être rangés du plus
- * génréaliste au plus spécifique.
- * Les propriétés des éléments doivent être arrangées comme
+ * J'ai tentÃ© de crÃ©er un code organisÃ© afin d'Ã©viter l'enfer
+ * du "mauvais CSS". Les Ã©lÃ©ments doivent Ãªtre rangÃ©s du plus
+ * gÃ©nrÃ©aliste au plus spÃ©cifique.
+ * Les propriÃ©tÃ©s des Ã©lÃ©ments doivent Ãªtre arrangÃ©es comme
  * suit : POSITIONNEMENT -> STYLE -> STYLE DYNAMIQUE.
  * Les animations se situent en fin de fichier.
  */
  
 /*IMPORTATION DES POLICES*/
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;600&display=swap');
+@font-face{
+    font-family: ExploreMono;
+    src: url("Assets/ExploreSansMono_Variable.ttf");
+}
 
 /*######################################################################*/
 
@@ -30,7 +33,7 @@ html{
   scrollbar-width: none;
 }
 
-/*Remise à 0 des marges des éléments chiants*/
+/*Remise Ã  0 des marges des Ã©lÃ©ments chiants*/
 html, body, ul {  
   margin: 0;
   padding: 0;
@@ -41,7 +44,7 @@ body {
   background-color: #202020;
   background-size: 100%;
   background-position: center center;
-  font-family: JetBrains Mono;
+  font-family: ExploreMono;
   font-weight: lighter;
   animation: 2s fadein_bg;
 }
@@ -132,7 +135,7 @@ a {
 .nom h1 {
   margin-bottom: 0;
 
-  font-family: JetBrains Mono;
+  font-family: ExploreMono;
   font-weight: normal;
   font-size: 2.5em;
 
