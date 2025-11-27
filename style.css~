@@ -11,8 +11,8 @@
  
 /*IMPORTATION DES POLICES*/
 @font-face{
-    font-family: ExploreMono;
-    src: url("Assets/ExploreSansMono_Variable.ttf");
+    font-family: 'ExploreMono';
+    src: url('https://bastiensante.github.io/Assets/Fonts/ExploreSansMono.woff2');
 }
 
 /*######################################################################*/
