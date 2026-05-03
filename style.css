@@ -1,13 +1,4 @@
-/* ------------------
- *    FICHIER CSS
- * ------------------
- * J'ai tentÃ© de crÃ©er un code organisÃ© afin d'Ã©viter l'enfer
- * du "mauvais CSS". Les Ã©lÃ©ments doivent Ãªtre rangÃ©s du plus
- * gÃ©nrÃ©aliste au plus spÃ©cifique.
- * Les propriÃ©tÃ©s des Ã©lÃ©ments doivent Ãªtre arrangÃ©es comme
- * suit : POSITIONNEMENT -> STYLE -> STYLE DYNAMIQUE.
- * Les animations se situent en fin de fichier.
- */
+
  
 /*IMPORTATION DES POLICES*/
 @font-face{
@@ -44,14 +35,14 @@ html{
   scrollbar-width: none;
 }
 
-/*Remise Ã  0 des marges des Ã©lÃ©ments chiants*/
+/*Remise a 0 des éléments problématiques*/
 html, body, ul {  
   margin: 0;
   padding: 0;
 }
 body {
   /*overflow: hidden;*/
-  color: #ffffff;
+  color: white;
   background-color: light-dark(var(--light-text), var(--dark-text))
   background-size: 100%;
   background-position: center center;
@@ -81,19 +72,19 @@ a {
   justify-content: center;
   position: fixed;
   width: 100%;
-  background-color: #202020;
+  background-color: --dark-bg;
+  animation: 2.5s testanim;
 }
 
 .navmenu-items {
   display: flex;
-  animation: 2s fadein_title;
   margin: 5px;
   font-family: inherit;
   font-weight: bold;
 }
 
 .navmenu-itembox {
-    border: 1px solid white;
+    margin: 5px;
     font-family: inherit;
 }
 .navmenu-itembox > button {
@@ -101,7 +92,11 @@ a {
     font-family: inherit;
     font-size: 300%;
 }
-
+.navmenu-itembox > button:hover {
+    animation : 0.5s select;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
 
 @media all and (max-width: 600px) {
   .navmenu-items button > div {
@@ -118,33 +113,24 @@ a {
 /*NOM*/
 .nom {
   text-align: center;
-  margin-top: 350px;
-  margin-bottom: 100%;
+  margin-top: 0px;
+  margin-bottom: 0%;
 
-  animation-delay: 3s;
   animation:
-    1.5s 2s shrink_rise forwards;
+    1s fadein_title;
 }
 .nom h1 {
-  margin-bottom: 0;
-
   font-family: ExploreMono;
   font-weight: normal;
   font-size: 2.5em;
-
-  animation: 2s fadein_title;
 }
 .nom h2 {
-  font-weight: lighter;
-  animation: 2s fadein_title;
+    font-weight: lighter;
+    animation: 1.5s shrink_rise;
+    animation-delay: 2s;
 }
 
 .site {
-  animation:
-    3s standstill;
-    2s rise;
-
-
 }
 
 /*SECTIONS DU SITE*/
@@ -223,10 +209,13 @@ a {
 
 /*ANIMATIONS*/
 @keyframes shrink_rise {
-  from{ margin-top: 350px;
-        margin-bottom: 100%;}
-  to  { margin-top: 200px;
-        margin-bottom: 150px;}
+  from{ margin-bottom: 100%;}
+  to  { margin-bottom: 0%;}
+}
+
+@keyframes testanim {
+    from {margin-top: 700px;}
+    to {margin-top:0px;}
 }
 
 @keyframes fadein_title {
@@ -255,7 +244,7 @@ a {
   to  {background-color: #ffffff;}
 }
 
-@keyframes come_down {
-  { margin-bottom: 100%;}
-  100% { margin-bottom: 0%;  }
+@keyframes select {
+    from { color: white; }
+    to   { color: yellow; }
 }
